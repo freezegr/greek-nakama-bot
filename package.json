@@ -1,0 +1,32 @@
+{
+  "name": "hentailand",
+  "version": "0.0.1-beta",
+  "description": "a discord bot with discord.js library",
+  "main": "index.js",
+  "dependencies": {
+    "@freezegold/anime.js": "^2.0.4",
+    "cheerio": "^1.0.0-rc.5",
+    "discord.js": "^12.5.1",
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "bot": "node ./index.js",
+    "test": "node ./test/index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freezegr/hentailand.git"
+  },
+  "keywords": [
+    "bot",
+    "discord.js"
+  ],
+  "author": "freezegr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freezegr/hentailand/issues"
+  },
+  "homepage": "https://github.com/freezegr/hentailand#readme"
+}
