@@ -4,12 +4,12 @@
   -[Commands](#commands)
 
 ### Info
-A discord bot with discord.js library for a anime greek fansub
+A discord bot with discord.js library for a anime greek fansub<br/>
 prefix: !
 
 ### commands 
-Help: show all commands
-Projects <status>: show the projects (status: ongoing/completed/mos/stalled/dropped)!
-Search: search a project!
-Anime-search <name>: search an anime!
-Manga-search <name>: search an manga!
+Help: show all commands<br/><br/>
+Projects <status>: show the projects (status: ongoing/completed/mos/stalled/dropped)!<br/>
+Search: search a project!<br/>
+Anime-search <name>: search an anime!<br/>
+Manga-search <name>: search an manga!<br/>
