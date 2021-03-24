@@ -4,8 +4,8 @@ client.on('ready', () => {
       let statuses = [
         "?help",
         "Version v0.0.1 beta",
-        "greek-nakama",
-		"200 anime"
+        "Greek-Nakama",
+		"Anime <3"
       ];
     setInterval(function() {
     	let status = statuses[Math.floor(Math.random() * statuses.length)];
