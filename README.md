@@ -1,4 +1,4 @@
-<h1 align="center">- Greek Nakama Bot -</h1>
+<h1 align="center">Greek Nakama Bot </h1><img src="https://raw.githubusercontent.com/freezegr/greek-nakama-bot/master/img/icon.jpg?token=AL4LZTYUUT223OXL63Y66ZLALMKWG" width="100" title="hover text">
 
 - [Info](#info)
   - [Commands](#commands)
