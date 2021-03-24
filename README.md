@@ -1,7 +1,7 @@
 <h1 align="center">Greek Nakama Bot</h1>
 
 - [Info](#info)
-  -[Commands](#commands)
+  - [Commands](#commands)
 
 ### Info
 A discord bot with discord.js library for a anime greek fansub<br/>
