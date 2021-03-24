@@ -1,7 +1,8 @@
-<h1 align="center">Greek Nakama Bot</h1>
+<h1 align="center">- Greek Nakama Bot -</h1>
 
 - [Info](#info)
   - [Commands](#commands)
+  - [API](https://github.com/freezegr/greek-nakama-bot/blob/master/api/api.js)
 
 ### Info
 A discord bot with discord.js library for a anime greek fansub<br/>
