@@ -1,1 +1,1 @@
-node: npm run test
+node: npm run bot
