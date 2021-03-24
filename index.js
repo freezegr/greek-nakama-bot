@@ -25,7 +25,7 @@ for (const file of commandFiles) {
 };
 
 
-client.login('ODIzNjE4MzcxMzI4Mjc4NTc4.YFjcYQ.dNmLzUplD_iwI1izGMNuPOITq_U');
+client.login(proceess.env.TOKEN);
 
 
 
