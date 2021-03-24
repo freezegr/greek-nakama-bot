@@ -3,6 +3,7 @@
 - [Info](#info)
   - [Commands](#commands)
   - [API](https://github.com/freezegr/greek-nakama-bot/blob/master/api/api.js)
+- [Website](https://greek-nakama.com/) 
 
 ### Info
 A discord bot with discord.js library for a anime greek fansub<br/>
