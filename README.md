@@ -1,4 +1,4 @@
-<h1 align="center">Greek Nakama Bot </h1><img src="https://raw.githubusercontent.com/freezegr/greek-nakama-bot/master/img/icon.jpg?token=AL4LZTYUUT223OXL63Y66ZLALMKWG" width="100" title="hover text">
+<h1 align="center"> Greek Nakama Bot </h1>
 
 - [Info](#info)
   - [Commands](#commands)
@@ -18,6 +18,3 @@ Manga-search <name>: search an manga!<br/>
 <p align="center">
   <img src="https://raw.githubusercontent.com/freezegr/greek-nakama-bot/master/img/icon.jpg?token=AL4LZTYUUT223OXL63Y66ZLALMKWG" width="350" title="hover text">
 </p>
-
-![](https://raw.githubusercontent.com/freezegr/greek-nakama-bot/master/img/icon.jpg?token=AL4LZTYUUT223OXL63Y66ZLALMKWG)
-
