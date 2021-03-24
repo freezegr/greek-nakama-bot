@@ -57,7 +57,7 @@ module.exports.search = ((name = 'aquarion evol!') => {
             .find('tr > td > a')
             .toArray()
           for (let i = 0; i < getURL.length; i++) {
-            if ($(getURL[i]).attr('href') != 'https://myanimelist.net/anime/40748/Jujutsu_Kaisen_TV') megaResult.url.push(getUrlFun($(getURL[i]).attr('href')))
+            if ($(getURL[i]).attr('href').startsWith('https://myanimelist.net/anime/')) megaResult.url.push(getUrlFun($(getURL[i]).attr('href')))
           }
 
         }
@@ -88,82 +88,3 @@ module.exports.search = ((name = 'aquarion evol!') => {
   })
 
 });
-
-/*
-module.exports.search = ((name = 'aquarion evol!') => {
-  return new Promise((resolve, reject) => {
-    request('https://greek-nakama.com/projects-greek-nakama/', function (error, response, html) {
-      if (!error && response.statusCode == 200) {
-        let result = []
-        var $ = cheerio.load(html);
-
-        //ongoin
-        let searchType = $(`div[id="$ongoing}"]`)
-          .find('p > a')
-          .toArray()
-        for (let i = 0; i < searchType.length; i++) {
-          result.push({
-			type: 'ongoin',
-            name: url.parse($(searchType[i]).attr('href'), true).query.txt_search,
-            link: $(searchType[i]).attr('href'),
-          })
-        }
-
-        //completed
-        let searchType1 = $(`div[id="completed"]`)
-          .find('p > a')
-          .toArray()
-        for (let i = 0; i < searchType1.length; i++) {
-          result.push({
-			  type: 'completed',
-            name: url.parse($(searchType1[i]).attr('href'), true).query.txt_search,
-            link: $(searchType1[i]).attr('href')
-          })
-        }
-
-        //mos
-        let searchType2 = $(`div[id="mos"]`)
-          .find('p > a')
-          .toArray()
-        for (let i = 0; i < searchType2.length; i++) {
-          result.push({
-			type: 'mos',
-            name: url.parse($(searchType2[i]).attr('href'), true).query.txt_search,
-            link: $(searchType2[i]).attr('href')
-          })
-        }
-
-        //stalled
-        let searchType3 = $(`div[id="stalled"]`)
-          .find('p > a')
-          .toArray()
-        for (let i = 0; i < searchType3.length; i++) {
-          result.push({
-			type: 'stalled',
-            name: url.parse($(searchType3[i]).attr('href'), true).query.txt_search,
-            link: $(searchType3[i]).attr('href')
-          })
-        }
-
-        //dropped
-        let searchType4 = $(`div[id="dropped"]`)
-          .find('p > a')
-          .toArray()
-        for (let i = 0; i < searchType4.length; i++) {
-          result.push({
-			type: 'dropped',
-            name: url.parse($(searchType4[i]).attr('href'), true).query.txt_search,
-            link: $(searchType4[i]).attr('href')
-          })
-        }
-		if(result.map(c => c.name).includes(name)){
-			console.log(result.filter(c => c.name == name))
-		}
-		console.log(name)
-		console.log(result.map(c => c.name).includes(name))
-      }
-    });
-  })
-});
-
-*/

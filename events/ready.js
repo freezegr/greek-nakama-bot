@@ -2,7 +2,7 @@ const { client } = require("../index.js");
 
 client.on('ready', () => {
       let statuses = [
-        "?help",
+        "!help",
         "Version v0.0.1 beta",
         "Greek-Nakama",
 		"Anime <3"

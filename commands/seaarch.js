@@ -16,9 +16,35 @@ module.exports = {
         dynamic: true
       }))
       .setFooter(`Command requested by ${message.author.username}`)
+    if (nameArg.length == 0) {
+      try {
+        return message.channel.send(embed.setDescription('You miss the name !search <name>')).then(msg => {
+          msg.delete({
+            timeout: 10000
+          })
+          message.delete({
+            timeout: 10000
+          })
+        })
+      } catch (err) {
+        //nothing
+      }
+    }
     let project = await search(nameArg)
-    //chunks function
-
+    if (project.results.length == 0) {
+      try {
+        return message.channel.send(embed.setDescription('No result')).then(msg => {
+          msg.delete({
+            timeout: 10000
+          })
+          message.delete({
+            timeout: 10000
+          })
+        })
+      } catch (err) {
+        console.log(err)
+      }
+    }
     Object.defineProperty(Array.prototype, 'chunk_inefficient', {
       value: function (chunkSize) {
         var array = this;
@@ -28,22 +54,23 @@ module.exports = {
           })
         );
       },
-	  configurable: true
+      configurable: true
     });
 
-    /*Array.range = function (n) { // Array.range(5) --> [0,1,2,3,4] 
-        return Array.apply(null, Array(n)).map((x, i) => i)
-      };
-      Object.defineProperty(Array.prototype, 'chunk', {
-        value: function (n) {
+    Array.range = function (n) { // Array.range(5) --> [0,1,2,3,4] 
+      return Array.apply(null, Array(n)).map((x, i) => i)
+    };
+    Object.defineProperty(Array.prototype, 'chunk', {
+      value: function (n) {
         return Array.range(Math.ceil(this.length / n)).map((x, i) => this.slice(i * n, i * n + n));
-      }
-    });*/
+      },
+      configurable: true
+    });
     let CharLength = 0;
 
     function test() {
       let stastotic = false
-	  //console.log(project.results.chunk_inefficient)
+      //console.log(project.results.chunk_inefficient)
       for (let i = 0; i < project.results.chunk_inefficient(10).length; i++) {
         project.results.chunk_inefficient(10)[i].forEach(function (x) {
           CharLength = CharLength + x.name.length + x.url.length
@@ -54,7 +81,7 @@ module.exports = {
               inline: true
             })
           } else if (stastotic == true) {
-			  
+
           } else {
             embed.addFields({
               name: 'max length',
@@ -62,9 +89,9 @@ module.exports = {
               inline: true
             })
             stastotic = true
-			embed.setDescription(`A lot of result for see all of them **[click me](${project.linkUrl})**`)
+            embed.setDescription(`A lot of result for see all of them **[click me](${project.linkUrl})**`)
           }
-		  
+
           //console.log(embed.fields)
         })
 
@@ -75,73 +102,3 @@ module.exports = {
     message.channel.send(embed)
   }
 };
-
-/*
-    .then(async msg => {
-      await msg.react('◀️');
-      await msg.react('▶️');
-      await msg.react('⏸️')
-
-      const filter = (reaction, user) => {
-        return ['◀️', '▶️', '⏸️'].includes(reaction.emoji.name) && user.id === message.author.id;
-      };
-      let counting = 0
-
-      function retest() {
-        msg.awaitReactions(filter, {
-            max: 1,
-            time: 30000,
-            errors: ['time']
-          })
-          .then(collected => {
-            const reaction = collected.first();
-
-            async function reacting(filter, collected, reaction) {
-			  console.log(counting)
-			  if(counting == min){
-				  //min kaneis tt
-			  } else if(counting == max){
-				  //min kaneis tpt
-			  } else if(counting < min){
-				  //console.log(counting)
-				  console.log('counting < min')
-				  counting = min
-			  }else if (counting > max){
-				  counting = max
-				  console.log('counting > max')
-			  }else {
-                //console.log(counting)
-				setField(counting)
-				console.log(setField(counting))
-                msg.edit(embed)
-			  }
-            }
-            if (reaction.emoji.name === '◀️') {
-			  counting = counting - 1
-              reacting(filter, collected, reaction)
-			  console.log(msg)
-			  msg.reactions.cache.forEach(reaction => reaction.remove(message.author.id))
-			  console.log(message.author.id)
-			  retest()
-            } else if (reaction.emoji.name === '▶️') {
-			  counting = counting + 1
-              reacting(filter, collected, reaction)
-			  msg.reactions.cache.forEach(reaction => reaction.remove(message.author.id))
-			  console.log(message.author.id)
-              retest()
-            } else if (reaction.emoji.name === '⏸️') {
-              message.delete()
-              msg.delete()
-            }
-
-          })
-          .catch(errors => {
-			console.log(errors)
-            msg.delete()
-            message.delete()
-            message.reply('Select a reactions')
-          })
-      }
-      retest()
-    })
-*/
