@@ -25,7 +25,7 @@ for (const file of commandFiles) {
 };
 
 
-client.login(proceess.env.TOKEN);
+client.login(process.env.TOKEN);
 
 
 
