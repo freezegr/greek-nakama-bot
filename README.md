@@ -15,4 +15,5 @@ Search: search a project!<br/>
 Anime-search <name>: search an anime!<br/>
 Manga-search <name>: search an manga!<br/>
 
-<img align="center"> src="https://raw.githubusercontent.com/freezegr/greek-nakama-bot/master/img/icon.jpg?token=AL4LZTYUUT223OXL63Y66ZLALMKWG" alt="ICON">
+![](https://raw.githubusercontent.com/freezegr/greek-nakama-bot/master/img/icon.jpg?token=AL4LZTYUUT223OXL63Y66ZLALMKWG)
+
