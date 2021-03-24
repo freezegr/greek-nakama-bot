@@ -14,3 +14,5 @@ Projects <status>: show the projects (status: ongoing/completed/mos/stalled/drop
 Search: search a project!<br/>
 Anime-search <name>: search an anime!<br/>
 Manga-search <name>: search an manga!<br/>
+
+<img align="center"> src="./img/icon.jpg" alt="ICON">
